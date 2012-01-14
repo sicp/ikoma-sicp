@@ -1,0 +1,23 @@
+
+
+
+(define factor (lambda (x) (if (= x 0) 1 (* x (factor (- x 1))))))
+
+(define getlist (lambda (x) (if (= x 0) '() (cons (getlist (- x 1)) x))))
+(getlist 20)
+
+(define fizzbuzz
+	(lambda (from to)
+		(if (> from to) #f
+				(begin
+					(if (= 0 (remainder from 15)) (print "fizzbuzz")
+							 (if (= 0 (remainder from 3)) (print "fizz")
+								 (if (= 0 (remainder from 5)) (print "buzz")
+										 (print from))))
+					(fizzbuzz (+ from 1) to)))))
+(fizzbuzz 1 302)
+
+
+
+
+(begin (print " hoge" )(print "fuga")(print "guha"))
