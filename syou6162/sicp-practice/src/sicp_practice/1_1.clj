@@ -43,3 +43,24 @@
 (defn problem1-3 [a b c]
   (let [[max-1 max-2] (take-last 2 (sort (list a b c)))]
     (+ (* max-1 max-1) (* max-2 max-2))))
+
+;; 1.1.7 例: Newton法による平方根
+
+(defn average [x y]
+  (/ (+ x y) 2))
+
+(defn improve [guess x]
+  (average guess (/ x guess)))
+
+(defn square [x] (* x x))
+
+(defn good-enough? [guess x]
+  (< (Math/abs (- (square guess) x)) 0.001))
+
+(defn sqrt-iter [guess x]
+  (if (good-enough? guess x)
+    guess
+    (sqrt-iter (improve guess x) x)))
+
+(defn sqrt [x]
+  (sqrt-iter 1.0 x))
