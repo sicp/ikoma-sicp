@@ -15,6 +15,6 @@
 * 全員分のディレクトリをroot以下に作ってもらう(残りはsakaguchi君とybenjo。sakaguchi君についてはgitの使い方等含めてsyou6162が教えます)
 * 処理系に関する案内のページ(メインは[clojure](https://github.com/sicp/ikoma-sicp/wiki/Clojure)?)の作成
 * 教材や関連リンクを[まとめたページ](https://github.com/sicp/ikoma-sicp/wiki/SICP)の作成
-* 次回以降の課題割り当てを決める
+* 次回以降の[課題割り当て](https://github.com/sicp/ikoma-sicp/wiki/Assignments)を決める
 * リポジトリの更新があったらskypeにlogを流すbotを作る?
  * さくらvps上ではskypeのログインがうまくできないらしい...
