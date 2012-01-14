@@ -33,3 +33,19 @@
       (recur (inc counter) (* result counter)))))
 
 (my-fact 5) ; 120
+
+;; 1.2.2 木構造再帰
+(defn fib-recur [n]
+  (cond (= n 0) 0
+	(= n 1) 1
+	:else (+ (fib-recur (- n 1))
+		 (fib-recur (- n 2)))))
+
+(defn fib-iter [a b count]
+  (if (= count 0)
+    b
+    (fib-iter (+ a b) a (- count 1))))
+
+(defn fib [n]
+  (fib-iter 1 0 n))
+
