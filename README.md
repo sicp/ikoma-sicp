@@ -3,7 +3,7 @@
 ## 次回開催予定
 2012/02/04 13:00
 
-* [初回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/勉強会-20120204)
+* [初回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120204)
 
 ## 現状
 * Done
