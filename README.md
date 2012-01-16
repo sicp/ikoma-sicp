@@ -18,3 +18,6 @@
 * 次回以降の[課題割り当て](https://github.com/sicp/ikoma-sicp/wiki/Assignments)を決める
 * リポジトリの更新があったらskypeにlogを流すbotを作る?
  * さくらvps上ではskypeのログインがうまくできないらしい...
+
+## その他
+* Clojureを使う上で便利な[Leiningen](https://github.com/sicp/ikoma-sicp/wiki/Leiningen)のインストールや使い方について書いてみました
