@@ -65,6 +65,25 @@
 (defn sqrt [x]
   (sqrt-iter 1.0 x))
 
+(sqrt 9) ; 3.00009155413138
+
+;; 問題1.6
+(defn new-if [predicate then-clause else-clause]
+  (cond predicate then-clause
+	:else else-clause))
+
+(new-if (= 2 3) 0 5) ; 5
+
+(new-if (= 1 1) 0 5) ; 0
+
+(defn sqrt-iter [guess x]
+  (new-if (good-enough? guess x)
+	  guess
+	  (sqrt-iter (improve guess x) x)))
+
+(sqrt 9) ;; StackOverflowErrorで死んでしまう
+;; なぜか? => else-clauseも評価してしまって無限に再帰してしまう
+;; だからifは特殊形式でないといけない(マクロを使えばできるはず)
 
 ;; 1.1.8 ブラックボックス抽象としての手続き
 
