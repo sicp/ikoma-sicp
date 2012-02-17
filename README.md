@@ -1,9 +1,9 @@
 #  SICP読書会
 
 ## 次回開催予定
-**2012/02/11 14:30**(次回以降もこの曜日・時間帯を想定しています）
+2012/02/18 14:30
 
-* [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120211)
+* [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120218)
 
 ## 連絡、その他
 * [勉強会の方針](https://github.com/sicp/ikoma-sicp/wiki/方針)についてのページを作ったので、要望等あれば追記お願いします
