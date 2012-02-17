@@ -146,3 +146,71 @@
 (f 4)
 (f 5)
 
+
+
+;; 1.16
+
+(defn fast-expt-seq [b n]
+  (fast-expt-seq-iter b n 1))
+
+;; 間違い
+;; (defn fast-expt-seq-iter [b counter product]
+;;   (if (= counter 0)
+;;       product
+;;       (if (odd? counter)
+;;           (fast-expt-seq-iter b
+;;                               (- counter 1)
+;;                               (* product b))
+;;           (fast-expt-seq-iter b
+;;                               (/ counter 2)
+;;                               (nth (iterate (partial * b) product) (/ counter 2))))))
+
+
+(defn fast-expt-seq-iter [b counter product]
+  (cond (= counter 0) product
+        (even? counter) (fast-expt-seq-iter (* b b)
+                                            (/ counter 2)
+                                            product)
+        :else (fast-expt-seq-iter b
+                          (- counter 1)
+                          (* product b))))
+
+(fast-expt-seq 2 1)
+(fast-expt-seq 2 2)
+(fast-expt-seq 2 3)
+(fast-expt-seq 2 4)
+(fast-expt-seq 2 5)
+
+
+;; 1.17
+
+(defn double [n]
+  (+ n n))
+
+(defn halve [n]
+  (/ n 2))
+
+(defn fast-prod [a b]
+  (cond (= b 0) 0
+        (even? b) (double (fast-prod a (halve b)))
+        :else (+ a (fast-prod a (- b 1))) ))
+
+(fast-prod 2 2)
+(fast-prod 2 3)
+(fast-prod 2 4)
+
+
+;; 1.18
+;; double,halveが必要
+(defn fast-prod [a b]
+  (fast-prod-iter a b 0))
+
+(defn fast-prod-iter [a counter product]
+  (cond (= counter 0) product
+        (even? counter) (fast-prod-iter (double a) (halve counter) product)
+        :else (fast-prod-iter a (- counter 1) (+ product a))))
+
+(fast-prod 2 1)
+(fast-prod 2 2)
+(fast-prod 2 3)
+(fast-prod 2 4)
