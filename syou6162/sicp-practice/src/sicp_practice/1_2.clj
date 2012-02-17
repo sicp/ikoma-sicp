@@ -48,3 +48,34 @@
 
 (defn fib [n]
   (fib-iter 1 0 n))
+
+;; 両替の計算
+;; メインのアイディアは"場合で分けて残りを再帰で解く"
+(defn first-denomination [kinds-of-coins]
+  (cond (= kinds-of-coins 1) 1
+	(= kinds-of-coins 2) 5
+	(= kinds-of-coins 3) 10
+	(= kinds-of-coins 4) 25
+	(= kinds-of-coins 5) 50))
+
+(defn ^:dynamic cc [amount kinds-of-coins]
+  (cond (= amount 0) 1
+	(or (< amount 0) (= kinds-of-coins 0)) 0
+	:else (+ (#'cc amount
+		     (- kinds-of-coins 1))
+		 (#'cc (- amount
+			(first-denomination kinds-of-coins))
+		     kinds-of-coins))))
+
+(defn count-charge [amount]
+  (cc amount 5))
+
+(count-charge 100) ; 292
+
+;; 1セントと5セントで10セントを両替する例
+(with-redefs [first-denomination (fn [kinds-of-coins]
+				   (cond (= kinds-of-coins 1) 1
+					 (= kinds-of-coins 2) 5))]
+  (cc 10 2)) ; 3
+;; 5セント×2、5セント×1 + 1セント×5、1セント×10の3通り
+

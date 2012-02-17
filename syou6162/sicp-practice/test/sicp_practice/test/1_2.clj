@@ -20,3 +20,6 @@
   (is (= (fib 3) 2))
   (is (= (fib 4) 3))
   (is (= (fib 5) 5)))
+
+(deftest test-count-charge
+  (is (= (count-charge 100) 292)))
