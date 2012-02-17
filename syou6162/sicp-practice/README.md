@@ -21,6 +21,8 @@ syou6162の解いた問題を列挙していきます。
 + [問題1.14](https://github.com/sicp/ikoma-sicp/blob/master/syou6162/sicp-practice/src/sicp_practice/ex_1_14.clj)
 + [問題1.15](https://github.com/sicp/ikoma-sicp/blob/master/syou6162/sicp-practice/src/sicp_practice/ex_1_15.clj)
 + [問題1.16](https://github.com/sicp/ikoma-sicp/blob/master/syou6162/sicp-practice/src/sicp_practice/ex_1_16.clj)
++ [問題1.17](https://github.com/sicp/ikoma-sicp/blob/master/syou6162/sicp-practice/src/sicp_practice/ex_1_17.clj)
++ [問題1.18](https://github.com/sicp/ikoma-sicp/blob/master/syou6162/sicp-practice/src/sicp_practice/ex_1_18.clj)
 
 ## License
 
