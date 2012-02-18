@@ -222,6 +222,9 @@
 (fast-expt-seq 2 4)
 (fast-expt-seq 2 5)
 
+;; 解説
+;; e.g. 2^{10} = 4^5 = 4 ¥times 4^4 = 4 ¥times 16^2 = 4 ¥times 256^1
+;; ../../img/supplementary_1.16.png
 
 ;; 1.17
 
