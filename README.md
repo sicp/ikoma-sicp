@@ -7,7 +7,7 @@
 
 benjoさんがお休みのようなので、benjoさん担当の箇所(問題1.24、問題1.30)はみんなで解いてくるようにしましょう。
 
-* [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120218)
+* [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120303)
 
 ## 連絡、その他
 * [勉強会の方針](https://github.com/sicp/ikoma-sicp/wiki/方針)についてのページを作ったので、要望等あれば追記お願いします
