@@ -76,3 +76,32 @@
 
 (fixed-point (fn [y] (+ (sin y) (cos y)))
 	     1.0) ; 1.259003859740025
+
+;; ニュートン法
+
+(def dx 0.00001)
+
+(defn deriv [g]
+  (fn [x] (/ (- (g (+ x dx)) (g x))
+	     dx)))
+
+(defn cube [x] (* x x x))
+
+((deriv cube) 5) ; 75.00014999664018
+
+(defn newton-transform [g]
+  (fn [x]
+    (- x (/ (g x) ((deriv g) x)))))
+
+(defn newton-method [g guess]
+  (fixed-point (newton-transform g) guess))
+
+(defn square [x] (* x x))
+
+(defn my-sqrt [x]
+  (newton-method (fn [y] (- (square y) x))
+		 1.0))
+
+(my-sqrt 4.0) ; 2.0000000944796694
+(my-sqrt 9.0) ; 3.0000000015508212
+
