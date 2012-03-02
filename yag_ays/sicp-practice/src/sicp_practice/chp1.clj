@@ -146,6 +146,14 @@
 (f 4)
 (f 5)
 
+;; 解説
+;; f (n)の1項目をa，2項目をb，3項目をcとすると，f (n+1)の各項a',b',c'は
+;; a' <- a+2b+3c
+;; b' <- a
+;; c' <- b
+;; となる．
+
+
 
 ;; 1.15
 (defn cube [x]
@@ -214,6 +222,9 @@
 (fast-expt-seq 2 4)
 (fast-expt-seq 2 5)
 
+;; 解説
+;; e.g. 2^{10} = 4^5 = 4 ¥times 4^4 = 4 ¥times 16^2 = 4 ¥times 256^1
+;; ../../img/supplementary_1.16.png
 
 ;; 1.17
 
@@ -247,3 +258,7 @@
 (fast-prod 2 2)
 (fast-prod 2 3)
 (fast-prod 2 4)
+
+
+
+;; chp1.cljではex_1_18までの解答のみ．ex_1_19以降の解答は個別に別ファイルを作成している
