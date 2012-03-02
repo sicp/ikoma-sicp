@@ -39,16 +39,28 @@
 
 ;; 1.3
 (defn problem1-3 [a b c]
-  (cond (and (<= a b) (<= a c)) (* b c)
-        (and (<= b a) (<= b c)) (* a c)
-        (and (<= c a) (<= c b)) (* a b)))
+  (cond (and (<= a b) (<= a c)) (+ (* b b) (* c c))
+        (and (<= b a) (<= b c)) (+ (* a a) (* c c))
+        (and (<= c a) (<= c b)) (+ (* a a) (* b b))))
 
 
 ;; 1.4
 ;; bが0より大きければa+b，bが0以下ならばa-b
 
 ;; 1.5
-;; 作用的順序の場合では(p) -> (p)を繰り返すのでtestが評価されない
+;; Ans. 正規順序の場合では(p) -> (p)を繰り返すのでtestが評価されない
+
+
+;; 正規順序の場合
+(test 0 (p))
+(test 0 (p)) ; (p)を展開して(p)になる
+;; 以下無限ループ
+
+
+;; 作用的順序の場合
+(test 0 (p))
+(if (= 0 0) 0 (p))
+0
 
 ;; 1.6
 
@@ -134,3 +146,119 @@
 (f 4)
 (f 5)
 
+;; 解説
+;; f (n)の1項目をa，2項目をb，3項目をcとすると，f (n+1)の各項a',b',c'は
+;; a' <- a+2b+3c
+;; b' <- a
+;; c' <- b
+;; となる．
+
+
+
+;; 1.15
+(defn cube [x]
+  (* x x x))
+
+(defn p [x]
+  (- (* 3 x) (* 4 (cube x))))
+
+(defn abs [x]
+  (if (> x 0)
+    x
+    (- x)))
+
+(defn sine [angle]
+  (if (<=  (abs angle) 0.1)
+    angle
+    (p (sine (/ angle 3.0)))))
+
+(sine 12.15)
+
+
+(use 'clojure.tools.trace)
+(dotrace [p] (sine 12.15))
+;; TRACE t1857: (p 0.049999999999999996)
+;; TRACE t1857: => 0.1495
+;; TRACE t1858: (p 0.1495)
+;; TRACE t1858: => 0.4351345505
+;; TRACE t1859: (p 0.4351345505)
+;; TRACE t1859: => 0.9758465331678772
+;; TRACE t1860: (p 0.9758465331678772)
+;; TRACE t1860: => -0.7895631144708228
+;; TRACE t1861: (p -0.7895631144708228)
+;; TRACE t1861: => -0.39980345741334
+
+
+;; 1.16
+
+(defn fast-expt-seq [b n]
+  (fast-expt-seq-iter b n 1))
+
+;; 間違い
+;; (defn fast-expt-seq-iter [b counter product]
+;;   (if (= counter 0)
+;;       product
+;;       (if (odd? counter)
+;;           (fast-expt-seq-iter b
+;;                               (- counter 1)
+;;                               (* product b))
+;;           (fast-expt-seq-iter b
+;;                               (/ counter 2)
+;;                               (nth (iterate (partial * b) product) (/ counter 2))))))
+
+
+(defn fast-expt-seq-iter [b counter product]
+  (cond (= counter 0) product
+        (even? counter) (fast-expt-seq-iter (* b b)
+                                            (/ counter 2)
+                                            product)
+        :else (fast-expt-seq-iter b
+                          (- counter 1)
+                          (* product b))))
+
+(fast-expt-seq 2 1)
+(fast-expt-seq 2 2)
+(fast-expt-seq 2 3)
+(fast-expt-seq 2 4)
+(fast-expt-seq 2 5)
+
+;; 解説
+;; e.g. 2^{10} = 4^5 = 4 ¥times 4^4 = 4 ¥times 16^2 = 4 ¥times 256^1
+;; ../../img/supplementary_1.16.png
+
+;; 1.17
+
+(defn double [n]
+  (+ n n))
+
+(defn halve [n]
+  (/ n 2))
+
+(defn fast-prod [a b]
+  (cond (= b 0) 0
+        (even? b) (double (fast-prod a (halve b)))
+        :else (+ a (fast-prod a (- b 1))) ))
+
+(fast-prod 2 2)
+(fast-prod 2 3)
+(fast-prod 2 4)
+
+
+;; 1.18
+;; double,halveが必要
+(defn fast-prod [a b]
+  (fast-prod-iter a b 0))
+
+(defn fast-prod-iter [a counter product]
+  (cond (= counter 0) product
+        (even? counter) (fast-prod-iter (double a) (halve counter) product)
+        :else (fast-prod-iter a (- counter 1) (+ product a))))
+
+(fast-prod 2 1)
+(fast-prod 2 2)
+(fast-prod 2 3)
+(fast-prod 2 4)
+
+
+
+;; chp1.cljではex_1_18までの解答のみ．ex_1_19以降の解答は個別に別ファイルを作成している
