@@ -1,5 +1,7 @@
 (ns sicp-practice.ex-1-21)
 
+(defn square [x] (* x x))
+
 (defn devises? [a b]
   (= (rem b a) 0))
 
