@@ -93,14 +93,14 @@
   (fn [x]
     (- x (/ (g x) ((deriv g) x)))))
 
-(defn newton-method [g guess]
+(defn newtons-method [g guess]
   (fixed-point (newton-transform g) guess))
 
 (defn square [x] (* x x))
 
 (defn my-sqrt [x]
-  (newton-method (fn [y] (- (square y) x))
-		 1.0))
+  (newtons-method (fn [y] (- (square y) x))
+		  1.0))
 
 (my-sqrt 4.0) ; 2.0000000944796694
 (my-sqrt 9.0) ; 3.0000000015508212
