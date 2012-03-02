@@ -2,12 +2,12 @@
 
 (defn square [x] (* x x))
 
-(defn devises? [a b]
+(defn devides? [a b]
   (= (rem b a) 0))
 
 (defn find-divisor [n test-divisor]
   (cond (> (square test-divisor) n) n
-	(devises? test-divisor n) test-divisor
+	(devides? test-divisor n) test-divisor
 	:else (find-divisor n (+ test-divisor 1))))
 
 (defn smallest-divisor [n]
