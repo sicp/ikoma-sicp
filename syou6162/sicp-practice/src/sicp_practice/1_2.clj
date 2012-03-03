@@ -79,3 +79,33 @@
   (cc 10 2)) ; 3
 ;; 5セント×2、5セント×1 + 1セント×5、1セント×10の3通り
 
+;; フェルマーテストの回数を増やしていくと正しい割合が増えていくことを確認する
+
+(use 'sicp-practice.ex-1-21)
+
+(defn expmod [base exp m]
+ (cond (= exp 0) 1
+       (even? exp) (rem (square (expmod base (/ exp 2) m)) m)
+       :else (rem (* base (expmod base (- exp 1) m)) m)))
+
+(defn fermat-test [n]
+  (letfn [(try-it [a]
+		  (= (expmod a n n) a))]
+    (try-it (+ 1 (rand-int (- n 1))))))
+
+(defn fast-prime? [n times]
+  (cond (= times 0) true
+	(fermat-test n) (fast-prime? n (- times 1))
+	:else false))
+
+(def x 19999) ; 素数ではない => フェルマーテストだと(確率は低いが)間違える可能性がある
+(prime? x) ; false
+
+;; frequenciesは回数のtableを返してくれる便利な関数です
+
+(frequencies (map (fn [_] (fermat-test x)) (range 1000))) ; {false 999, true 1}
+(frequencies (map (fn [_] (fermat-test x)) (range 10000))) ; {false 9978, true 22}
+;; これらのandを取っていくので、間違える可能性は非常に低くなっていくことが分かる
+
+(frequencies (map (fn [_] (fast-prime? x 1)) (range 1000))) ; {false 997, true 3}
+(frequencies (map (fn [_] (fast-prime? x 2)) (range 1000))) ; {false 1000}
