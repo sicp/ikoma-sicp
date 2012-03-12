@@ -1,13 +1,3 @@
-# sicp-practice
+# SICP in Clojure
 
-FIXME: write description
-
-## Usage
-
-FIXME: write
-
-## License
-
-Copyright (C) 2012 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Solutions : https://github.com/sicp/ikoma-sicp/tree/master/yag_ays/sicp-practice/src/sicp_practice
