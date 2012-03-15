@@ -35,12 +35,12 @@
   (try-it (+ 1 (rand-int (- n 1)))))
 
 (defn fast-prime? [n times]
-  (cond (= times 0) true
-        (fermat-test n) (fast-prime? n (- times 1))
-        :else false))
-
+    (cond (= times 0) true
+          (fermat-test n) (fast-prime? n (- times 1))
+          :else false))
+  
 ; ここどう値を渡したらいいのかわかってない
-;(time (take 3 (filter fast-prime? (iterate (partial + 2) 1001))))
-;(time (take 3 (filter fast-prime? (iterate (partial + 2) 10001))))
-;(time (take 3 (filter fast-prime? (iterate (partial + 2) 100001))))
-;(time (take 3 (filter fast-prime? (iterate (partial + 2) 1000001))))
+; (time (take 3 (filter fast-prime? (iterate (partial + 2) 1001))))
+; (time (take 3 (filter fast-prime? (iterate (partial + 2) 10001))))
+; (time (take 3 (filter fast-prime? (iterate (partial + 2) 100001))))
+; (time (take 3 (filter fast-prime? (iterate (partial + 2) 1000001))))
