@@ -30,4 +30,3 @@
 (defn factorial_2 [x]
   (product_2 identity inc 1 x))
 
-
