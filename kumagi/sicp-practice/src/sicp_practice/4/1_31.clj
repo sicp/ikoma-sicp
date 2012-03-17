@@ -46,4 +46,4 @@
        (/ 2 3)
        (product-itr #(/ (pow %) (* (- % 1) (+ % 1))) 4.0 #(+ % 2) a))))
 ;(println  (map #(println (pi %)) (range 10000)))
-(println  (map pi  (range 100)))
+(println (map pi (range 100)))
