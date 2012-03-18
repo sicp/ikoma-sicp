@@ -40,9 +40,9 @@
   :else (recur y (mod x y))))
 
 ;; An answer for b.
-(defn my-product [n]
+(defn my-product [a b]
   (defn my-match? [i]
-    (if (= 1 (gcd i n))
+    (if (= 1 (gcd i b))
       true
       false))
   (filtered-accumulate * 1 identity a inc b my-match?))
