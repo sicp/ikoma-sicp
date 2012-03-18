@@ -2,7 +2,7 @@
   (g 2))
 
 (defn square [x]
-  (* 2 2))
+  (* x x))
 
 (f square)
 ;; 4
