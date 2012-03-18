@@ -1,9 +1,11 @@
 (defn sqrt [x] (* x x))
+(defn xi [x i] (if (= i 1) x (sqrt x)))
+(defn di [i] (if (= i 1) x (sqrt x)))
 (defn tan-cf [x k]
   (def iter (fn [i result]
     (if (= i 0)
        result
-       (iter (dec i) (/ (if (= i 1) x (sqrt x)) (- (- (* i 2) 1) result))))))
+       (iter (dec i) (/ (xi x i) (- (- (* i 2) 1) result))))))
    (iter k 0))
 
 ;; user=> (tan-cf (/ 3.14 4) 1000)
@@ -23,5 +25,3 @@
 ;; (def a (fn [x] (+ 1 x)))
 ;; (tan-cf (/ 3.14 4) 1000)
 ;; 0.9992039901050428
-
-
