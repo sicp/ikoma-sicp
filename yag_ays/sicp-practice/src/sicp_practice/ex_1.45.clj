@@ -91,7 +91,7 @@
 
 
 
-;; 二階平均緩和では八乗根は計算出来無い
+;; 二回平均緩和では八乗根は計算出来無い
 (defn eighth-root [x]
   (calc-root fixed-point
             (repeated average-damp 2)
@@ -110,7 +110,7 @@
 
 
 
-;; average-dampが3回必要になるところは...?
+;; 平均緩和が四回必要になるところは...?
 (defn fifteenth-root [x]
   (calc-root fixed-point
             (repeated average-damp 3)
