@@ -4,40 +4,39 @@
 ***3/24、3/31は皆さんご都合が合わないようなのでお休みにしてあります***
 
 ***次回開催日のアンケートを取っています。syou6162&kumagiの研修次第で変わってしまうところもありますが、みなさんの都合をあらかじめ聞いておきたいと思います***
-yag_ays:4日とも特に問題なし
 
 - 4/7(土)
- - 8:00-10:00 =>
- - 10:00-12:00 => 
- - 13:00-15:00 => 
- - 15:00-17:00 => 
- - 17:00-19:00 => 
- - 19:00-21:00 => 
- - 21:00-23:00 => 
+ - 8:00-10:00 => yag_ays
+ - 10:00-12:00 => yag_ays
+ - 13:00-15:00 => yag_ays
+ - 15:00-17:00 => yag_ays
+ - 17:00-19:00 => yag_ays
+ - 19:00-21:00 => yag_ays
+ - 21:00-23:00 => yag_ays
 - 4/8(日)
- - 8:00-10:00 => ybenjo  
- - 10:00-12:00 => ybenjo  
- - 13:00-15:00 => ybenjo  
- - 15:00-17:00 => ybenjo  
- - 17:00-19:00 => ybenjo  
- - 19:00-21:00 => ybenjo  
- - 21:00-23:00 => ybenjo  
+ - 8:00-10:00 => ybenjo, yag_ays
+ - 10:00-12:00 => ybenjo, yag_ays
+ - 13:00-15:00 => ybenjo, yag_ays
+ - 15:00-17:00 => ybenjo, yag_ays  
+ - 17:00-19:00 => ybenjo, yag_ays
+ - 19:00-21:00 => ybenjo, yag_ays
+ - 21:00-23:00 => ybenjo, yag_ays
 - 4/14(土)
- - 8:00-10:00 => ybenjo  
- - 10:00-12:00 => ybenjo   
- - 13:00-15:00 => ybenjo  
- - 15:00-17:00 => ybenjo  
- - 17:00-19:00 => ybenjo  
- - 19:00-21:00 => ybenjo  
- - 21:00-23:00 => ybenjo  
+ - 8:00-10:00 => ybenjo, yag_ays  
+ - 10:00-12:00 => ybenjo, yag_ays
+ - 13:00-15:00 => ybenjo, yag_ays
+ - 15:00-17:00 => ybenjo, yag_ays
+ - 17:00-19:00 => ybenjo, yag_ays
+ - 19:00-21:00 => ybenjo, yag_ays
+ - 21:00-23:00 => ybenjo, yag_ays
 - 4/15(日)
- - 8:00-10:00 => ybenjo  
- - 10:00-12:00 => ybenjo  
- - 13:00-15:00 => ybenjo  
- - 15:00-17:00 => ybenjo  
- - 17:00-19:00 => ybenjo  
- - 19:00-21:00 => ybenjo  
- - 21:00-23:00 => ybenjo  
+ - 8:00-10:00 => ybenjo, yag_ays
+ - 10:00-12:00 => ybenjo, yag_ays
+ - 13:00-15:00 => ybenjo, yag_ays
+ - 15:00-17:00 => ybenjo, yag_ays
+ - 17:00-19:00 => ybenjo, yag_ays
+ - 19:00-21:00 => ybenjo, yag_ays
+ - 21:00-23:00 => ybenjo, yag_ays
 
 <!-- * [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120318) -->
 
