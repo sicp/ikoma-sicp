@@ -1,49 +1,18 @@
 (ns sicp-practice.seesaw-example
   (:use seesaw.core
-	seesaw.graphics))
+	seesaw.graphics
+	sicp-practice.pictlang.common
+	sicp-practice.ex-2-46 ; vector
+	sicp-practice.ex-2-47 ; frame
+	sicp-practice.ex-2-48 ; segment
+	))
 
 ;; ref http://d.hatena.ne.jp/higepon/20060424/1145443723
 
 (def ^:dynamic *width* 500)
 (def ^:dynamic *height* 500)
 
-;; frame
-(defn make-frame [origin edge1 edge2]
-  (list origin edge1 edge2))
-
-
-(defn origin-frame [frame]
-  (first frame))
-
-(defn edge1-frame [frame]
-  (second frame))
-
-(defn edge2-frame [frame]
-  (last frame))
-
-;; vector
-(defn make-vect [x y]
-  (list x y))
-
-(defn xcor-vect [v]
-  (first v))
-
-(defn ycor-vect [v]
-  (second v))
-
-(defn add-vect [v1 v2]
-  (make-vect (+ (xcor-vect v1) (xcor-vect v2))
-	     (+ (ycor-vect v1) (ycor-vect v2))))
-
-(defn sub-vect [v1 v2]
-  (make-vect (- (xcor-vect v1) (xcor-vect v2))
-	     (- (ycor-vect v1) (ycor-vect v2))))
-
-(defn scale-vect [s v]
-  (make-vect (* s (xcor-vect v))
-	     (* s (ycor-vect v))))
-
-;; segment
+;; point
 (defn make-point [x y]
   (list x y))
 
@@ -60,15 +29,6 @@
 		(y-point p)
 		")")))
 
-(defn make-segment [p1 p2]
-  (list p1 p2))
-
-(defn start-segment [s]
-  (first s))
-
-(defn end-segment [s]
-  (second s))
-
 ;;
 
 (defn frame-coord-map [frame]
@@ -79,14 +39,6 @@
 			   (edge1-frame frame))
 	       (scale-vect (ycor-vect v)
 			   (edge2-frame frame))))))
-
-(def s1 (make-segment
-	 (make-point 0 0) (make-point 1 1)))
-
-(def s2 (make-segment
-	 (make-point 0 0) (make-point 0 1)))
-
-(def segments (list s1 s2))
 
 (def my-frame (make-frame (make-vect 0 0)
 			  (make-vect 1 0)
