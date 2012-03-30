@@ -1,0 +1,70 @@
+(ns sicp-practice.pictlang.wave
+  (:use sicp-practice.pictlang.common
+	sicp-practice.pictlang.point
+	sicp-practice.ex-2-46 ; vector
+	sicp-practice.ex-2-48 ; segment
+	))
+
+(def wave
+     (segments->painter
+      (list
+       (make-segment (make-vect 0.40 1.00)
+		     (make-vect 0.35 0.80))
+       (make-segment (make-vect 0.35 0.80)
+		     (make-vect 0.40 0.60))
+       (make-segment (make-vect 0.40 0.60)
+		     (make-vect 0.30 0.60))
+       (make-segment (make-vect 0.30 0.60)
+		     (make-vect 0.20 0.55))
+       (make-segment (make-vect 0.20 0.55)
+		     (make-vect 0.00 0.80))
+       (make-segment (make-vect 0.00 0.60)
+		     (make-vect 0.20 0.45))
+       (make-segment (make-vect 0.20 0.45)
+		     (make-vect 0.30 0.55))
+       (make-segment (make-vect 0.30 0.55)
+		     (make-vect 0.35 0.50))
+       (make-segment (make-vect 0.35 0.50)
+		     (make-vect 0.25 0.00))
+       (make-segment (make-vect 0.40 0.00)
+		     (make-vect 0.50 0.20))
+       (make-segment (make-vect 0.50 0.20)
+		     (make-vect 0.60 0.00))
+       (make-segment (make-vect 0.75 0.00)
+		     (make-vect 0.65 0.50))
+       (make-segment (make-vect 0.65 0.50)
+		     (make-vect 1.00 0.20))
+       (make-segment (make-vect 1.00 0.40)
+		     (make-vect 0.70 0.60))
+       (make-segment (make-vect 0.70 0.60)
+		     (make-vect 0.60 0.60))
+       (make-segment (make-vect 0.60 0.60)
+		     (make-vect 0.65 0.80))
+       (make-segment (make-vect 0.65 0.80)
+		     (make-vect 0.60 1.00)))))
+
+(def monar
+     (segments->painter
+      (list
+       (make-segment (make-point 0.2 0.7)
+		     (make-point 0.3 0.9))
+       (make-segment (make-point 0.4 0.7)
+		     (make-point 0.3 0.9))
+       (make-segment (make-point 0.6 0.7)
+		     (make-point 0.7 0.9))
+       (make-segment (make-point 0.8 0.7)
+		     (make-point 0.7 0.9))
+       (make-segment (make-point 0.3 0.5)
+		     (make-point 0.4 0.6))
+       (make-segment (make-point 0.6 0.6)
+		     (make-point 0.7 0.5))
+       (make-segment (make-point 0.5 0.2)
+		     (make-point 0.6 0.4))
+       (make-segment (make-point 0.5 0.2)
+		     (make-point 0.4 0.4))
+       (make-segment (make-point 0.45 0.3)
+		     (make-point 0.55 0.3))
+       (make-segment (make-point 0.85 0.6)
+		     (make-point 0.9 0.4))
+       (make-segment (make-point 0.85 0.2)
+		     (make-point 0.9 0.4)))))
