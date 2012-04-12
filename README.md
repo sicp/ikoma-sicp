@@ -6,39 +6,39 @@
 ***次回開催日のアンケートを取っています。syou6162&kumagiの研修次第で変わってしまうところもありますが、みなさんの都合をあらかじめ聞いておきたいと思います***
 
 - 4/7(土)
- - 8:00-10:00 => yag_ays, keisks, kumagi
- - 10:00-12:00 => yag_ays, keisks, kumagi
- - 13:00-15:00 => yag_ays, keisks, kumagi
- - 15:00-17:00 => yag_ays, keisks, kumagi
- - 17:00-19:00 => yag_ays, keisks, kumagi
- - 19:00-21:00 => yag_ays, keisks, kumagi
- - 21:00-23:00 => yag_ays, keisks, kumagi
+ - 8:00-10:00 => yag_ays, kumagi
+ - 10:00-12:00 => yag_ays, kumagi
+ - 13:00-15:00 => yag_ays, kumagi
+ - 15:00-17:00 => yag_ays, kumagi
+ - 17:00-19:00 => yag_ays, kumagi
+ - 19:00-21:00 => yag_ays, kumagi
+ - 21:00-23:00 => yag_ays, kumagi
  - 研修の合間の引越しでsyou6162は無理そうです
 - 4/8(日)
- - 8:00-10:00 => ybenjo, yag_ays, keisks, kumagi
- - 10:00-12:00 => ybenjo, yag_ays, keisks, kumagi
- - 13:00-15:00 => ybenjo, yag_ays, keisks, kumagi
- - 15:00-17:00 => ybenjo, yag_ays, keisks, kumagi
- - 17:00-19:00 => ybenjo, yag_ays, keisks, kumagi
- - 19:00-21:00 => ybenjo, yag_ays, keisks, kumagi
- - 21:00-23:00 => ybenjo, yag_ays, keisks, kumagi
+ - 8:00-10:00 => ybenjo, yag_ays, kumagi
+ - 10:00-12:00 => ybenjo, yag_ays, kumagi
+ - 13:00-15:00 => ybenjo, yag_ays, kumagi
+ - 15:00-17:00 => ybenjo, yag_ays, kumagi
+ - 17:00-19:00 => ybenjo, yag_ays, kumagi
+ - 19:00-21:00 => ybenjo, yag_ays, kumagi
+ - 21:00-23:00 => ybenjo, yag_ays, kumagi
  - 研修の合間の引越しでsyou6162は無理そうです(21:00-23:00とかならいけるかもしれないけど、ちと不確定です...)
 - 4/14(土)
  - 8:00-10:00 => yag_ays, keisks , kumagi, syou6162, oza
- - 10:00-12:00 => yag_ays, keisks, kumagi, syou6162, oza
- - 13:00-15:00 => yag_ays, keisks, kumagi, syou6162, oza?(ちょっときわどい時間なので，確認して後で書き込みます　)
- - 15:00-17:00 => yag_ays, keisks, kumagi, syou6162
- - 17:00-19:00 => yag_ays, keisks, kumagi, syou6162
- - 19:00-21:00 => yag_ays, keisks, kumagi, syou6162
- - 21:00-23:00 => yag_ays, keisks, kumagi, syou6162, oza
+ - 10:00-12:00 => yag_ays, kumagi, syou6162, oza
+ - 13:00-15:00 => yag_ays, kumagi, syou6162, oza?(ちょっときわどい時間なので，確認して後で書き込みます　)
+ - 15:00-17:00 => yag_ays, kumagi, syou6162
+ - 17:00-19:00 => yag_ays, kumagi, syou6162
+ - 19:00-21:00 => yag_ays, kumagi, syou6162
+ - 21:00-23:00 => yag_ays, kumagi, syou6162, oza
 - 4/15(日)
- - 8:00-10:00 => ybenjo, yag_ays, keisks, kumagi, syou6162
- - 10:00-12:00 => ybenjo, yag_ays, keisks, kumagi, syou6162
- - 13:00-15:00 => yag_ays, keisks, kumagi, syou6162
- - 15:00-17:00 => yag_ays, keisks, kumagi, syou6162
- - 17:00-19:00 => yag_ays, keisks, kumagi, syou6162
- - 19:00-21:00 => yag_ays, keisks, kumagi, syou6162
- - 21:00-23:00 => yag_ays, keisks, kumagi, syou6162
+ - 8:00-10:00 => ybenjo, yag_ays, kumagi, syou6162
+ - 10:00-12:00 => ybenjo, yag_ays, kumagi, syou6162
+ - 13:00-15:00 => yag_ays, kumagi, syou6162
+ - 15:00-17:00 => yag_ays, kumagi, syou6162
+ - 17:00-19:00 => yag_ays, kumagi, syou6162
+ - 19:00-21:00 => yag_ays, kumagi, syou6162
+ - 21:00-23:00 => yag_ays, kumagi, syou6162
 
 <!-- * [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120318) -->
 
