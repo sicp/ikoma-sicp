@@ -10,17 +10,16 @@
 - 4/20(金)
  - 20:00-22:00 => syou6162, oza
 - 4/21(土)
- - 8:00-10:00 => syou6162, yag_ays, oza, y_benjo
- - 10:00-12:00 => syou6162, yag_ays, oza
+ - 8:00-10:00 => syou6162, yag_ays, oza, y_benjo, keiks
+ - 10:00-12:00 => syou6162, yag_ays, oza, keisks
  - 13:00-15:00 => syou6162, yag_ays
  - 15:00-17:00 => syou6162, yag_ays
  - 17:00-19:00 => syou6162, yag_ays
  - 19:00-21:00 => syou6162, yag_ays, y_benjo
  - 21:00-23:00 => syou6162, yag_ays, y_benjo
- - すみません終日予定が入っております。keisuke-sa
 - 4/22(日)
- - 8:00-10:00 => keisuke-sa
- - 10:00-12:00 => keisuke-sa
+ - 8:00-10:00 => keisks
+ - 10:00-12:00 => keisks
  - 13:00-15:00 => 
  - 15:00-17:00 => 
  - 17:00-19:00 => yag_ays
