@@ -2,6 +2,7 @@
 
 ## 次回開催予定
 * [次回用のwikiページ](https://github.com/sicp/ikoma-sicp/wiki/20120421)
+* [次回以降の日程調査アンケートページ](https://github.com/sicp/ikoma-sicp/wiki/Schedule)(移行しました)
 
 ## 連絡、その他
 * [勉強会の方針](https://github.com/sicp/ikoma-sicp/wiki/方針)についてのページを作ったので、要望等あれば追記お願いします
