@@ -12,4 +12,4 @@
              3)))
 
 (defn n-fold-smooth [f n]
-  (repeated smooth n) f)
+  ((repeated smooth n) f))
