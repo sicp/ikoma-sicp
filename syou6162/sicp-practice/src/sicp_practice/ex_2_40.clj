@@ -38,6 +38,14 @@
 
 (unique-pairs 5) ; ((2 1) (3 1) (3 2) (4 1) (4 2) (4 3) (5 1) (5 2) (5 3) (5 4))
 
+;; clojureのforだとこんな感じでも書ける
+;; (defn my-unique-pairs [n]
+;;   (for [i (range 1 (inc n))
+;; 	j (range 1 (inc i))
+;; 	:when (> i j)]
+;;     (list i j)))
+;; (my-unique-pairs 5) ; ((2 1) (3 1) (3 2) (4 1) (4 2) (4 3) (5 1) (5 2) (5 3) (5 4))
+
 (defn prime-sum-pair [n]
   (map make-sum-pair
        (filter prime-sum? (unique-pairs n))))
