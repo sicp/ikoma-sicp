@@ -12,4 +12,8 @@
 
 (cdr (cons-alt 1 2))
 
-;;よくわからないので要質問
+;; (cdr (const-alt 1 2))
+;; ((const-alt 1 2) (fn [p q] q))  ;; apply 'cdr'
+;; ((fn [m] (m 1 2)) (fn [p q] q)) ;; apply 'const-alt'
+;; ((fn [p q] q) 1 2) ;; apply 'fn [m]'
+;; (2)
