@@ -50,13 +50,7 @@
 
 
 ;; ex_2.57
-
-
-;; (defn augend [s] (next (next (next s))))
-;; ;; product
-;; (defn multiplicand [p] (next (next (next p))))
-;; ;; exponent
-;; (defn exponent [s] (next (next (next s))))
-
 (deriv '(* x y (+ x 3)) 'x)
-;; わからない
+
+
+;; in progress...
