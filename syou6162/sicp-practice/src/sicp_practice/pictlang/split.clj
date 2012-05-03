@@ -1,11 +1,7 @@
 (ns sicp-practice.pictlang.split
-  (:use sicp-practice.pictlang.painter))
-
-(defn up-split [painter n]
-  (if (= n 0)
-    painter
-    (let [smaller (up-split painter (- n 1))]
-      (below painter (beside smaller smaller)))))
+  (:use sicp-practice.pictlang.painter
+	sicp-practice.ex-2-44 ;; up-split
+	))
 
 (defn right-split [painter n]
   (if (= n 0)

@@ -1,4 +1,4 @@
-(ns sicp-practice.ex-2-48
+(ns sicp-practice.ex-2-44
   (:use sicp-practice.pictlang.painter))
 
 (defn up-split [painter n]
