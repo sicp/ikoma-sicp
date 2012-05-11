@@ -47,6 +47,12 @@
 (defn exponentiation? [x]
   (and (list? x) (= (first x) '**)))
 
+(defn base [x]
+  (second x))
+
+(defn exponent [x]
+  (first (next (next x))))
+
 (defn deriv [exp var]
   (cond (number? exp) 0
         (variable? exp) (if (same-variable? exp var) 1 0)
@@ -56,14 +62,18 @@
                                      (deriv (multiplicand exp) var))
                                  (make-product (deriv (multiplier exp) var)
                                                (multiplicand exp)))
-        (exponentiation? exp) (make-product (deriv (multiplier exp) var)
-                                            (make-product (multiplicand exp)
-                                                          (make-exponentiation (multiplier exp)
-                                                                               (dec (multiplicand exp)))))
+        (exponentiation? exp) (make-product (deriv (base exp) var)
+                                            (make-product (exponent exp)
+                                                          (make-exponentiation (base exp)
+                                                                               (dec (exponent exp)))))
         :else (println "error!")))
 
+
+; x^2 -> 2x
 ; user=> (deriv '(** x 2) 'x)
 ; (* 2 x)
-; user=> (deriv '(** (* x 2) 3) 'x)
-; (* 2 (* 3 (** (* x 2) 2)))
-; これを (* 6 (** (* x 2) 2)) にするにはどうしたらいいんだろう
+
+; (x^3 + 2x)^3 -> 3(3x^2 + 2)(x^3 + 2x)^2
+; user=> (deriv '(** (+ (** x 3) (* 2 x)) 3) 'x)
+; (* (+ (* 3 (** x 2)) 2) (* 3 (** (+ (** x 3) (* 2 x)) 2)))
+
